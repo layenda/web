@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Daily Usage - Cursor Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/daily.js" defer></script>
+<script src="js/theme.js" defer></script>
+
+</head>
+
+<body>
+<header><h1>Daily Usage 분석</h1></header>
+
+<div class="container">
+    <div class="card">
+        <label>날짜 선택: </label>
+        <input type="date" id="date-picker">
+        <button onclick="loadDaily()">조회</button>
+    </div>
+
+    <div class="card">
+        <canvas id="dailyChart" height="150"></canvas>
+    </div>
+
+    <div class="card">
+        <h3>상세 로그</h3>
+        <table>
+            <thead><tr><th>시간</th><th>Action</th><th>Token</th><th>Status</th></tr></thead>
+            <tbody id="daily-table"></tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
