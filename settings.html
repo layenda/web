@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Settings - Cursor Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="js/theme.js" defer></script>
+
+</head>
+
+<body>
+<header><h1>계정 및 토큰 설정</h1></header>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Cursor API 토큰 저장</h3>
+
+        <input id="acc1" placeholder="Account 1 Token" style="width:300px;">
+        <br><br>
+        <input id="acc2" placeholder="Account 2 Token" style="width:300px;">
+        <br><br>
+
+        <button onclick="saveTokens()">저장</button>
+        <p id="save-msg"></p>
+    </div>
+
+</div>
+
+<script>
+function saveTokens(){
+    const t1 = document.getElementById("acc1").value;
+    const t2 = document.getElementById("acc2").value;
+    localStorage.setItem("cursor_tokens", JSON.stringify({t1, t2}));
+    document.getElementById("save-msg").innerText = "저장 완료";
+}
+</script>
+
+</body>
+</html>
+🧠 7) JS — 메인 대시보드 로직 js/main.j
