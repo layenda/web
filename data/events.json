@@ -1,0 +1,39 @@
+[
+  {
+    "event_id": "evt_20260404_001",
+    "timestamp": "2026-04-04T12:31:11Z",
+    "event_type": "model_inference",
+    "user_id": "user_123",
+    "project_id": "proj_456",
+    "model": "cursor-composer",
+    "input_tokens": 523,
+    "output_tokens": 1291,
+    "total_tokens": 1814,
+    "latency_ms": 842,
+    "status": "success",
+    "metadata": {
+      "ip": "192.168.1.11",
+      "region": "KR",
+      "client": "cursor",
+      "version": "1.42.1"
+    }
+  },
+  {
+    "event_id": "evt_20260404_002",
+    "timestamp": "2026-04-04T12:32:44Z",
+    "event_type": "model_inference",
+    "user_id": "user_123",
+    "project_id": "proj_456",
+    "model": "cursor-composer",
+    "input_tokens": 210,
+    "output_tokens": 550,
+    "total_tokens": 760,
+    "latency_ms": 430,
+    "status": "error",
+    "error_code": "RATE_LIMIT",
+    "metadata": {
+      "ip": "192.168.1.11",
+      "region": "KR"
+    }
+  }
+]
