@@ -1,0 +1,13 @@
+{
+  "today": 324,
+  "week": 2150,
+  "api": 9812,
+  "error": "1.8%",
+  "labels": ["월","화","수","목","금","토","일"],
+  "usage": [120,150,180,200,250,300,320],
+  "events": [
+    {"time":"10:21","text":"Generate Code","status":"OK"},
+    {"time":"09:50","text":"Rate Limit","status":"WARN"},
+    {"time":"09:30","text":"Refactor","status":"OK"}
+  ]
+}
