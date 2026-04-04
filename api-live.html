@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Cursor API Live</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="api.js" defer></script>
+<script src="js/theme.js" defer></script>
+
+</head>
+
+<body>
+<header><h1>Cursor API Live Monitoring</h1></header>
+
+<div class="container">
+    <div class="card">
+        <h3>API 토큰 입력</h3>
+        <input id="token" type="text" placeholder="cursor-api-token">
+        <button onclick="testConnection()">테스트</button>
+        <p id="api-status"></p>
+    </div>
+
+    <div class="card">
+        <h3>실시간 데이터</h3>
+        <pre id="live-data">-</pre>
+    </div>
+</div>
+
+</body>
+</html>
