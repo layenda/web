@@ -8,6 +8,29 @@ header {
     color: white;
     padding: 20px 30px;
 }
+.top-nav {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #c9d1d9;
+    text-decoration: none;
+    padding: 6px 10px;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.top-nav a:hover {
+    color: #fff;
+    border-color: #8b949e;
+}
+.top-nav a.active {
+    color: #fff;
+    background: #238636;
+    border-color: #2ea043;
+}
 .container {
     max-width: 1200px;
     margin: 30px auto;
@@ -40,4 +63,47 @@ table {
 th, td {
     padding: 14px;
     border-bottom: 1px solid #eee;
+}
+
+.token-input {
+    width: min(100%, 360px);
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 16px 16px;
+    }
+    .top-nav {
+        gap: 8px;
+    }
+    .top-nav a {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+    .container {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+    .card {
+        padding: 16px;
+        border-radius: 10px;
+        margin-bottom: 16px;
+    }
+    .kpi-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .kpi-value {
+        font-size: 22px;
+    }
 }

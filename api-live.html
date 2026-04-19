@@ -5,18 +5,27 @@
 <title>Cursor API Live</title>
 
 <link rel="stylesheet" href="style.css">
-<script src="api.js" defer></script>
+<script src="js/common.js" defer></script>
+<script src="js/api.js" defer></script>
 <script src="js/theme.js" defer></script>
 
 </head>
 
 <body>
-<header><h1>Cursor API Live Monitoring</h1></header>
+<header>
+    <h1>Cursor API Live Monitoring</h1>
+    <nav class="top-nav">
+        <a href="index.html">대시보드</a>
+        <a href="daily.html">Daily Usage</a>
+        <a class="active" href="api-live.html">API Live</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+</header>
 
 <div class="container">
     <div class="card">
         <h3>API 토큰 입력</h3>
-        <input id="token" type="text" placeholder="cursor-api-token">
+        <input id="token" type="password" placeholder="cursor-api-token">
         <button onclick="testConnection()">테스트</button>
         <p id="api-status"></p>
     </div>

@@ -5,21 +5,31 @@
 <title>Settings - Cursor Dashboard</title>
 
 <link rel="stylesheet" href="style.css">
+<script src="js/common.js" defer></script>
+<script src="js/settings.js" defer></script>
 <script src="js/theme.js" defer></script>
 
 </head>
 
 <body>
-<header><h1>계정 및 토큰 설정</h1></header>
+<header>
+    <h1>계정 및 토큰 설정</h1>
+    <nav class="top-nav">
+        <a href="index.html">대시보드</a>
+        <a href="daily.html">Daily Usage</a>
+        <a href="api-live.html">API Live</a>
+        <a class="active" href="settings.html">Settings</a>
+    </nav>
+</header>
 
 <div class="container">
 
     <div class="card">
         <h3>Cursor API 토큰 저장</h3>
 
-        <input id="acc1" placeholder="Account 1 Token" style="width:300px;">
+        <input id="acc1" class="token-input" type="password" placeholder="Account 1 Token" autocomplete="off">
         <br><br>
-        <input id="acc2" placeholder="Account 2 Token" style="width:300px;">
+        <input id="acc2" class="token-input" type="password" placeholder="Account 2 Token" autocomplete="off">
         <br><br>
 
         <button onclick="saveTokens()">저장</button>
@@ -28,15 +38,5 @@
 
 </div>
 
-<script>
-function saveTokens(){
-    const t1 = document.getElementById("acc1").value;
-    const t2 = document.getElementById("acc2").value;
-    localStorage.setItem("cursor_tokens", JSON.stringify({t1, t2}));
-    document.getElementById("save-msg").innerText = "저장 완료";
-}
-</script>
-
 </body>
 </html>
-🧠 7) JS — 메인 대시보드 로직 js/main.j
